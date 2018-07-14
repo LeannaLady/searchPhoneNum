@@ -18,12 +18,19 @@
     
   </view>
  
-  <view class="into-item" wx:for="{{phoneInfo}}" wx:key="">
-     <text class="title">{{item.title}}</text><text class="text">{{item.value}}</text>
+  <view class="into-item">
+     <text class="title">省份：</text><text class="text">{{phoneInfo.province}}</text>
   </view>
-   
-    
-    
-
-  
+  <view class="into-item">
+     <text class="title">城市：</text><text class="text">{{phoneInfo.city}}</text>
+  </view>
+  <view class="into-item">
+     <text class="title">运营商：</text><text class="text">{{phoneInfo.company}}</text>
+  </view>
+  <view class="into-item">
+     <text class="title">区号：</text><text class="text">{{phoneInfo.areacode}}</text>
+  </view>
+  <view class="into-item">
+     <text class="title">邮编：</text><text class="text">{{phoneInfo.zip}}</text>
+  </view>
 </view>

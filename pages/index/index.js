@@ -4,29 +4,9 @@ const app = getApp()
 Page({
   data: {
 
-    phoneInfo:[
-      {
-        "title":"省份：",
-        "value":""
-      },
-      {
-        "title":"城市：",
-        "value":""
-      },
-      {
-        "title":"运营商：",
-        "value":""
-      },
-      {
-        "title":" 区号：",
-        "value":""
-      },
-      {
-        "title":" 邮编：",
-        "value":""
-      }
-
-    ],
+    phoneInfo:{
+     
+    },
     phoneNum:null,
   },
   phoneNum:function(e){
@@ -39,14 +19,63 @@ Page({
     })
   },
   sendPhoneNum:function(){
+    wx.showLoading({
+      title: '加载中',
+    })
 
     var that=this,
         phonenumber  = that.data.phoneNum,
         myreg=/^[1][3,4,5,7,8][0-9]{9}$/; 
+        var sendphone  = phonenumber.substring(0,7);
+        
+
     if (!myreg.test(phonenumber)){ 
-      
+
+      wx.showModal({
+            content: '请输入合法手机号码!',
+          });
+      that.setData({
+
+       phoneNum:''
+
+    })
+      wx.hideLoading()
+
+      return;
+
+    }else{
+      wx.request({
+        url:'https://apis.juhe.cn/mobile/get?phone='+sendphone+'&key=1189e3089256749ff5773e38babdab82',
+        success:function(res){
+          wx.hideLoading()
+          if(res.data.resultcode==200){
+
+            that.setData({
+               phoneInfo:res.data.result
+            })
 
 
+
+          }else{
+            wx.showModal({
+              content: '请重试',
+           
+            });
+          }
+          
+        },
+        fail:function(err){
+          console.log(err);
+          wx.hideLoading()
+          wx.showModal({
+            content: '请重试',
+          });
+          that.setData({
+            phoneInfo:''
+          })
+
+        }
+      })
     }
 
 

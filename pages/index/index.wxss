@@ -28,11 +28,11 @@
 	margin-bottom: 50rpx;
 }
 .num-box{
-	width: 600rpx;
+	width: 570rpx;
 	height: 80rpx;
 	border:1px solid #ddd;
 	border-radius: 12rpx;
-	text-indent: 30rpx;
+	padding-left: 30rpx;
 	font-size: 28rpx;
 }
 .search-btn{
