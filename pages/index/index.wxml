@@ -13,7 +13,8 @@
 </view> -->
 <view class="container">
   <view class="num-wrap">
-    <input type="text" name="" placeholder="请输入您要查询的手机号" class="num-box" value="{{phoneNum}}" bindinput="phoneNum" />
+    <input type="number" name="" placeholder="请输入您要查询的手机号" class="num-box" value="{{phoneNum}}" bindinput="phoneNum" />
+    <view class="iconfont icon-guanbi2fill close-num" bindtap="cleanPhoneNum"></view>
     <button class="search-btn" bindtap="sendPhoneNum">查询</button>
     
   </view>

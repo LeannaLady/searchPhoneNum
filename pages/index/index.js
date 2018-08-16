@@ -7,7 +7,7 @@ Page({
     phoneInfo:{
      
     },
-    phoneNum:null,
+    phoneNum:'',
   },
   phoneNum:function(e){
     var that=this
@@ -18,16 +18,22 @@ Page({
 
     })
   },
+  cleanPhoneNum:function(){
+    var that = this;
+    that.setData({
+     phoneNum:''
+    })
+
+  },
   sendPhoneNum:function(){
     wx.showLoading({
       title: '加载中',
     })
 
     var that=this,
-        phonenumber  = that.data.phoneNum,
-        myreg=/^[1][3,4,5,7,8][0-9]{9}$/; 
-        var sendphone  = phonenumber.substring(0,7);
-        
+        phonenumber  = that.data.phoneNum.replace(/-/g,""),
+        myreg=/^[1][3,4,5,7,8][0-9]{9}$/, 
+        sendphone  = phonenumber.substring(0,7);
 
     if (!myreg.test(phonenumber)){ 
 
@@ -38,7 +44,7 @@ Page({
 
        phoneNum:''
 
-    })
+      })
       wx.hideLoading()
 
       return;
