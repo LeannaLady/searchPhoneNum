@@ -8,6 +8,23 @@ Page({
      
     },
     phoneNum:'',
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
+  },
+  onLoad:function(){
+    // 查看是否授权
+    // wx.getSetting({
+    //   success(res) {
+    //     if (res.authSetting['scope.userInfo']) {
+    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+    //       wx.getUserInfo({
+    //         success(res) {
+    //           console.log(res.userInfo)
+    //         }
+    //       })
+    //     }
+    //   }
+    // })
+
   },
   phoneNum:function(e){
     var that=this
@@ -31,8 +48,8 @@ Page({
     })
 
     var that=this,
-        phonenumber  = that.data.phoneNum.replace(/-/g,""),
-        myreg=/^[1][3,4,5,7,8][0-9]{9}$/, 
+        phonenumber  = that.data.phoneNum.replace(/-/g,"").replace(/\s/g,"").trim(),
+        myreg=/^[1][3,4,5,6,7,8,9][0-9]{9}$/, 
         sendphone  = phonenumber.substring(0,7);
 
     if (!myreg.test(phonenumber)){ 

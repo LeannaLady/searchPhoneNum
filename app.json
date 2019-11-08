@@ -1,12 +1,46 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
+    "pages/finds/index",
+    "pages/user/index",
+    "pages/aboutUs/index",
+    "pages/findMe/index",
+    "pages/laugh/index",
+    "pages/exchangeRate/index",
+    "pages/goldData/index",
+    "pages/lotteryTicket/index",
+    "pages/stock/index",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "手机号归属地精准查询",
-    "navigationBarTextStyle":"black"
-  }
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#22b1e5",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/images/home.png",
+        "selectedIconPath": "static/images/home_chose.png"
+      },
+      {
+        "pagePath": "pages/finds/index",
+        "text": "查一查",
+        "iconPath": "static/images/money.png",
+        "selectedIconPath": "static/images/money_chose.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "用户中心",
+        "iconPath": "static/images/user.png",
+        "selectedIconPath": "static/images/user_chose.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

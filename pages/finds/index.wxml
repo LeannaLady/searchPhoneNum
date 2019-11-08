@@ -1,0 +1,16 @@
+<view class="home-container">
+  <view class="finds-item-wrap">
+      <navigator class="finds-item" url="/pages/lotteryTicket/index">
+        今日运动目标~
+      </navigator>
+      <navigator class="finds-item" url="/pages/stock/index">
+        今日运动打卡~
+      </navigator>
+      <navigator class="finds-item" url="/pages/goldData/index">
+        今日运动感悟~
+      </navigator>
+      <navigator class="finds-item" url="/pages/exchangeRate/index">
+        今日运动步数
+      </navigator>
+  </view>
+</view>

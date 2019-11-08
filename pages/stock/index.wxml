@@ -1,0 +1,3 @@
+<view>
+  <text>当前手机电量：{{power}}</text>
+</view>

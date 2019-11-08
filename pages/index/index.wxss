@@ -16,12 +16,11 @@
 
 .icon-guanbi2fill:before { content: "\e724"; }
 
-
+/* 
 .container{
 	padding: 0 50rpx;
 	padding-top: 100rpx;
-
-}
+} */
 .num-wrap{
 	margin-bottom: 50rpx;
 	position:relative;

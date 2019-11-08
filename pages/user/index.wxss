@@ -1,0 +1,67 @@
+.userinfo{
+  width: 100%;
+  box-sizing: border-box;
+  height: 300rpx;
+}
+.userinfo-btn{
+  width: 320rpx;
+  background-color:#F8F8F8;
+  font-size:30rpx;
+}
+.userinfo-avatar{
+  width: 66px;
+  height:66px;
+  padding-left:80rpx;
+}
+.userinfo-nickname{
+  padding-left:80rpx;
+  text-align: center;
+  background-image: -webkit-linear-gradient(left, #0d7bf0, #fff 25%, #0d7bf0 50%, #fff 75%, #0d7bf0);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-background-size: 200% 100%;
+  -webkit-animation: masked-animation 2s infinite linear;
+  padding-top:40rpx;
+}
+.user-item-wrap{
+  width:100%;
+  border-top:1px solid #ececec;
+  text-indent: 80rpx;
+
+}
+.user-item{
+  width:100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: left;
+  border-bottom:1px solid #ececec;
+}
+@-webkit-keyframes masked-animation {
+  0% {
+      background-position: 0 0;
+  }
+
+  100% {
+      background-position: -100% 0;
+  }
+}
+.call-server{
+  position:fixed;
+  bottom:30rpx;
+  right:20rpx;
+}
+.server-btn{
+  width:100rpx;
+  height: 100rpx;
+  border:none;
+  background-color:none;
+  background-size:100%;
+  position: relative;
+}
+.server-img{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100rpx;
+  height:100rpx;
+}

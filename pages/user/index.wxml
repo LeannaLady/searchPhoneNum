@@ -1,0 +1,25 @@
+<view class="home-container">
+  <view class="userinfo">
+    <button class="userinfo-btn" wx:if="{{!userInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 手动获取头像昵称~</button>
+    <block wx:else>
+      <cover-image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="center"></cover-image>
+      <text class="userinfo-nickname">欢迎 {{userInfo.nickName}} ~</text>
+    </block>
+  </view>
+  <view class="user-item-wrap">
+    <navigator class="user-item" url="/pages/aboutUs/index">
+      关于我们
+    </navigator>
+    <navigator class="user-item" url="/pages/findMe/index">
+      FindMe
+    </navigator>
+    <navigator class="user-item" url="/pages/laugh/index">
+      每日一乐
+    </navigator>
+  </view>
+  <view class="call-server">
+    <button class="server-btn" open-type="contact">
+        <image class="server-img" src="/static/images/server.png"></image>
+    </button>
+  </view>
+</view>

@@ -1,24 +1,9 @@
-<!--index.wxml-->
-<!-- <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view> -->
-<view class="container">
+<view class="home-container">
   <view class="num-wrap">
     <input type="number" name="" placeholder="请输入您要查询的手机号" class="num-box" value="{{phoneNum}}" bindinput="phoneNum" />
     <view class="iconfont icon-guanbi2fill close-num" bindtap="cleanPhoneNum"></view>
     <button class="search-btn" bindtap="sendPhoneNum">查询</button>
-    
   </view>
- 
   <view class="into-item">
      <text class="title">省份：</text><text class="text">{{phoneInfo.province}}</text>
   </view>

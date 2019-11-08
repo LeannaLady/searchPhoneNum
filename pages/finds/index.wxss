@@ -1,0 +1,13 @@
+.finds-item-wrap{
+  width:100%;
+  border-top:1px solid #ececec;
+  text-indent: 80rpx;
+
+}
+.finds-item{
+  width:100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: left;
+  border-bottom:1px solid #ececec;
+}

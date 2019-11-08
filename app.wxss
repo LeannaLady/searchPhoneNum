@@ -1,5 +1,5 @@
 /**app.wxss**/
-.container {
+.home-container {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -7,4 +7,26 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
+  font-size:30rpx;
 } 
+.home-weight{
+  width:570rpx;
+}
+.pad20{
+  padding:20rpx;
+}
+.pad30{
+  padding:30rpx;
+}
+.pad40{
+  padding:40rpx;
+}
+.lineHeight40{
+  line-height: 40rpx;
+}
+.lineHeight50{
+  line-height: 50rpx;
+}
+.lineHeight60{
+  line-height: 60rpx;
+}

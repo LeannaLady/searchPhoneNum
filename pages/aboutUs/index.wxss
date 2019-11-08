@@ -1,0 +1,6 @@
+.about-intro{
+  padding:0 60rpx;
+  color:#666;
+  text-indent: 60rpx;
+}
+
